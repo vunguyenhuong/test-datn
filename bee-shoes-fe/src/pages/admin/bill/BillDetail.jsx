@@ -4,6 +4,7 @@ import BaseUI from "~/layouts/admin/BaseUI";
 import * as request from "~/utils/httpRequest";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import {
   FaBug,
   FaRegCalendar,
@@ -115,7 +116,7 @@ const BillDetail = () => {
           <span className="breadcrumb-item">Hóa đơn #{bill.code}</span>
         </nav>
         <div className="container overflow-x-auto mb-3" >
-          {/* <Timeline minEvents={billHistory.length} placeholder>
+          <Timeline minEvents={billHistory.length} placeholder>
             {billHistory.map((item, index) => (
               <TimelineEvent
                 key={index}
@@ -163,7 +164,7 @@ const BillDetail = () => {
                 subtitle={<FormatDate date={item.createAt} />}
               />
             ))}
-          </Timeline> */}
+          </Timeline>
         </div>
         <div className="d-flex">
           <div className="flex-grow-1">
